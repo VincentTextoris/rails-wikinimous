@@ -1,0 +1,13 @@
+<h1 class='text-center'>Articles#show</h1>
+
+<h2 class='text-center'><%= @article.title %></h2>
+<h4 class='text-center'><%= raw @show %></h4>
+<!-- @show remplace @article.content -->
+
+<p class='text-center'><%= link_to 'Edit this article', edit_article_path(@article) %></p>
+
+<p class='text-center'><%= link_to 'Delete this article', article_path(@article),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
+
+<p class='text-center'><%= link_to 'back to articles', articles_path %></p>
